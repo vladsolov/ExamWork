@@ -1,0 +1,696 @@
+$fontBase: 'Josefin Sans', sans-serif;
+$fontSecondary: 'Aleo', serif;
+$fontSize: 16px;
+$colorBlocks: #333333;
+$colorText: #e8e8e8;
+$colorBtn: #5474fd;
+$screenSizeTablet: 800px;
+$screenSizePhone: 320px;
+
+body {
+    background: #ffffff;
+    text-decoration: none;
+//     width: 100%;
+//     height: 100%;
+}
+
+body, form, div, p, a, img, h1, h2, h3, h4, h5, h6, table, table tr, table td {
+    border: none;
+    color: #000000;
+    font-family: Arial;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: normal;
+    margin: 0;
+    padding: 0;
+}
+
+input,
+textarea,
+select {
+    outline: none;
+    font-family: Arial;
+    font-size: 12px;
+    box-sizing: border-box;
+}
+
+input::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    outline: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+h1, h2 {
+    font-size: 20px;
+    color: #545454;
+}
+
+.button{
+    display: inline-block;
+    border: none;
+    height: 60px;
+    width: 225px;
+    outline: none;
+    background: linear-gradient(45deg, #496bfe 0%, #496bfe 50%, $colorBtn 50%, $colorBtn 100%);
+    font-size: 20px;
+    color: #fff;
+    transition-duration: 0.3s;
+    cursor: pointer;
+    
+    @media screen and (max-width:430px){
+        display: block;
+        margin: auto;
+    }
+
+    &:hover{
+        background: linear-gradient(45deg, $colorBtn 0%, $colorBtn 50%, #496bfe 50%, #496bfe 100%);
+    
+    }
+
+    &:active{
+        border: 2px solid darken($colorBtn,6);
+        
+    }
+}
+
+.mainer{ 
+    max-width: 1110px;
+    margin: 0 auto;
+    padding: 0 30px;
+
+    @media screen and (max-width:800px){
+        padding: 0 15px;
+    }
+}
+
+// ---------------Block-Search-----------------
+
+.block-search {
+    background-image: url(../image/bg-search.jpg);
+    background-position: center;
+    background-size: cover;    
+  
+    &__caption{
+        font-size: 48px;
+        font-family: $fontBase;
+        font-weight: bold;
+        text-align: center;
+        color: #ffffff;
+        text-transform: uppercase;
+        letter-spacing: 10px;
+        padding: 267px 0 0 0;
+
+        @media screen and (max-width:720px){
+            padding: 150px 0 0 0;
+            font-size: 34px;
+        }
+    }
+
+    &__under-caption{
+        font-size: $fontSize+6px;
+        font-family:$fontBase;
+        text-align: center;
+        color: #ffffff;
+        letter-spacing: 8px;
+        padding: 7px 0 36px 0;
+
+        @media screen and (max-width: 720px){
+            font-size: 13px;
+        }
+    }
+}
+
+.block-scroll-down{
+    padding: 241px 0 0 0;
+       text-align: center;
+
+    &__name-scroll{
+        cursor: pointer;
+        font-family: $fontBase;
+        font-size: $fontSize - 2px;
+        color: #ffffff;
+        letter-spacing: 3px;
+        opacity: 0.7;
+    }
+    
+    &__picture{
+        padding: 0 0 132px;
+        opacity: 0.7;
+    }
+}
+ 
+.search-inputs{
+    padding: 0 0 0px 40px;
+    margin: 0 auto;
+    max-width: 650px;
+        
+    
+    @media screen and (max-width:620px){
+        padding: 0;
+    }
+    &__search-string{
+        padding: 15px;
+        height: 56px;
+        width: 70%;
+        float: left;
+        background: #f1f1f1;
+        border: none;
+        margin: 0 auto;
+        font-size: $fontSize + 2px;
+        font-family: $fontBase;
+
+        @media screen and (max-width:620px){
+           width: 100%;
+        }
+    }
+        
+        
+    ::-webkit-input-placeholder {
+        text-align:center;
+        letter-spacing: 4px;
+        font-size: $fontSize - 2px;
+    }
+    input:focus::-webkit-input-placeholder { 
+        color:transparent; 
+    }
+        
+
+    &__search-btn{
+        position: relative;
+        float: left;
+        height: 56px;
+        width: 146px;
+        border: 2px solid #ffffff;
+        background: $colorBtn;
+        color: white;
+        font-family: $fontSecondary;
+        font-size: $fontSize - 2px;
+        border-left: none; 
+        cursor: pointer;
+        outline: none;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        text-align: center;
+        transition-duration: 0.3s;
+        
+        &:hover{
+            background:darken($colorBtn, 6);
+
+        }
+        
+        &:active{
+            border: 2px solid darken($colorBtn, 6);
+        }
+        
+        @media screen and (max-width:620px){
+            margin: 20px 0;
+            width: 100%;
+            border: 2px solid #fff;
+        }
+
+        @media screen and (max-width:605px){
+            align-items: center;
+            border: 2px solid #ffffff;
+            font-size: 0;
+        }
+    }
+        
+    &__search-img{
+        position: absolute;
+        top: 15px;
+        right: 15px;
+
+        @media screen and (max-width:605px){
+            position: initial;
+            margin: 20px 0;
+        }
+    }
+} 
+
+    // --------------Block-Menu-----------------
+
+.block-menu{
+    background-color: $colorBtn;
+    
+    &__row{
+        display: flex;
+        @media screen and (max-width:720px){
+            flex-flow: column;;
+         }
+    }
+
+    &__col{
+            
+        &--grow{
+            flex-grow: 1;
+            @media screen and (max-width:720px){
+                padding: 15px 0 0 0;
+             }
+        }
+    }
+
+    &__row{
+        align-items: center;
+    }
+
+    // @media screen and (max-width:620px){
+    //     flex-flow: column wrap;
+    // }
+}
+    
+.block-nav{
+    padding: 30px 0 26px 0;
+            
+    &__ul{
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        display: flex;
+
+         @media screen and (max-width:555px){
+            flex-flow: column;
+            padding: 15px;
+         }
+    }
+
+    &__li{
+        margin: 0 0 0 42px;
+
+        @media screen and (max-width:620px){
+            text-align: center;
+            margin: 10px;
+
+
+         }
+    }
+
+    &__link{
+        align-content: center;
+        position: relative;
+        font-size: $fontSize - 2px;
+        font-family: $fontSecondary;
+        color: #ffffff;
+        text-transform: uppercase;
+
+        @media screen and (max-width:620px){
+            font-size: $fontSize + 4px;
+            padding: 5px 10px;
+            border-radius: 50px;
+            background-color: rgba(0,0,0,0.3);
+        }
+        
+            
+        &:before{
+            content: '';
+            position: absolute;
+            width: 0%;
+            height: 2px;
+            background-color: #fff;
+            left: 0;
+            top: 15px;
+            @media screen and (max-width:620px){
+                height: 0;
+            }
+        }
+       
+        &:hover{
+            &:before{
+                width: 100%;
+            }
+            @media screen and (max-width:620px){
+                width: 0%;
+            }
+        }
+    }
+    @media screen and (max-width:620px){
+        display: flex;
+        flex-flow: column wrap;
+     }
+}
+
+    //----------------Block-Why Choose Us ------------
+
+.block-ChooseUs{
+    background-image: url(../image/bg-whyChooseUs.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+.block-content{
+    
+    &__row{
+        padding: 0 0 132px 0;
+        display: flex;
+
+        @media screen and (max-width:930px){
+            flex-flow: column;
+            padding: 0 0 50px 0;
+        }
+    }
+
+    &__col{
+        padding:118px 0 0 95px;
+
+        @media screen and (max-width:930px){
+            padding: 15px 0 0 0;
+            margin: auto;
+        }
+        &--grow{
+            padding: 205px 0 0 0;
+            flex-grow: 1;
+            max-width: 850px;
+
+            @media screen and (max-width:930px){
+                padding: 30px 0 0 0;
+            }
+        }
+    }
+    
+    &__caption{
+        font-family: $fontSecondary;
+        font-size: 36px;
+        color: #fff;
+
+        @media screen and (max-width:930px){
+            text-align: center;
+            padding: 15px 0px 20px 15px;
+            font-size: 40px;
+        }
+    }
+
+    &__description{
+        padding: 55px 0 40px 0;
+        letter-spacing: 3px;
+        font-family: $fontBase;
+        font-size: $fontSize;
+        font-weight: 300;
+        color: $colorText;
+        line-height: 26px;
+
+        @media screen and (max-width:930px){
+            text-align: center;
+            padding: 15px 0px 20px 15px;
+            font-size: $fontSize + 3px;
+        }
+
+        &--down{
+            letter-spacing: 3px;
+            font-family: $fontBase;
+            font-size: $fontSize;
+            font-weight: 300;
+            color: $colorText;
+            padding: 0 0 48px 0;
+            line-height: 26px;
+
+            @media screen and (max-width:930px){
+                text-align: center;
+                padding: 0;
+                font-size: $fontSize + 3px;
+            }
+        }
+    }
+
+    &__btn{
+        @media screen and (max-width:930px){
+            display: block;
+            margin: 30px auto 0px auto;
+        }
+    }
+    &__upPicture{
+        float: left;
+        padding: 0 0 5px 0;
+        @media screen and (max-width:930px){
+            display: none;
+        }
+    }
+
+    &__downPicture{
+      float: right;
+        @media screen and (max-width:500px){
+            width: 300px;
+            height: 200px;
+        }
+
+        @media screen and (max-width:420px){
+            display: none;
+        }
+    }
+    
+}
+
+//----------------Block-icons ------------
+
+.block-icons{
+    background-color: $colorBlocks;
+}
+
+.block-icons{
+
+    &__row{
+        justify-content: space-around;
+        display: flex;
+        padding:100px 0 120px 0;
+
+        @media screen and (max-width:620px){
+            flex-flow: column;
+            padding:100px 0 100px 0;
+        }
+    }
+
+    &__col{
+        text-align: center;
+        padding: 10px 0;
+    }
+    &__icon{
+        margin: auto;
+        width: 60px;
+        height: 60px;
+        
+        &--search{
+            margin: auto;
+            background-image: url(../image/sprite.png);
+            height: 60px;
+            width: 60px;
+            background-position: 0 0;
+            background-repeat: no-repeat;
+        }
+
+        &--select{
+            margin: auto;
+            background-image: url(../image/sprite.png);
+            height: 60px;
+            width: 60px;
+            background-position: -60px 0;
+            background-repeat: no-repeat;
+        }
+        
+        &--book{
+        margin: auto;
+            background-image: url(../image/sprite.png);
+            height: 60px;
+            width: 62px;
+            background-position: -128px 0;
+            background-repeat: no-repeat;
+        }
+    }
+
+    &__description-icon{
+        font-size: 36px;
+        font-family: $fontSecondary;
+        color: #fff;
+        padding: 15px;
+    }
+}
+
+// -----------------Block-Section-----------------------
+
+.block-sectionUp{
+    background-image: url(../image/bg-sectionGroupUp.jpg);
+    background-size: cover;
+    background-position: center;
+    padding:229px 0 100px 0;
+
+    @media screen and (max-width:430px){
+        padding:100px 0 100px 0;
+    }
+}
+
+.block-booking{
+    background-color: rgba(37, 37 ,37, 0.9);
+    max-width: 540px;
+    padding: 50px 30px;
+    
+ 
+    &__country{
+        font-family: $fontBase;
+        font-size: $fontSize + 4px;
+        color: #ffffff;
+        padding: 0 0 23px 0;
+    }
+
+
+    &__caption{
+        font-family: $fontBase;
+        font-size: $fontSize + 4px;
+        color: #ffffff;
+        padding: 0 0 21px 0;
+    }
+
+    &__description{
+        font-family: $fontBase;
+        font-size: $fontSize;
+        font-weight: 300;
+        line-height: 26px;
+        color: $colorText;
+        padding: 0 0 51px 0;
+    }
+
+    &--right{
+        margin: 0 0 0 auto;
+    }
+}
+
+.block-sectionDown{
+    background-image: url(../image/bg-sectionGroupDown.jpg);
+    background-size: cover;
+    background-position: center;
+    padding:229px 0 100px 0;
+
+    @media screen and (max-width:430px){
+        padding:100px 0 100px 0;
+    }
+}
+
+// -----------------Block-What our tourism say-----------------------
+
+.block-tourism{
+    background-image: url(../image/bg-testimotial.jpg);
+    background-position: center;
+    background-size: cover;
+
+    &__caption{
+        font-size: 36px;
+        font-family: $fontSecondary;
+        color: #fff;
+        text-align: center;
+        padding: 120px 0 100px 0;   
+
+        @media screen and (max-width:420px){
+            padding: 80px 0 70px 0;
+            font-size: 30px;
+        }
+    }
+    &__row{
+        display: flex;
+        max-width: 1110px;
+        padding: 0 0 100px 0;
+        
+        @media screen and (max-width:800px){
+            flex-flow: column;
+        }
+    }
+    &__col{
+        background-color: $colorBlocks;
+        padding: 0 0 0 60px;
+
+        &--image{
+            @media screen and (max-width:420px){
+                display: none;
+
+            }
+        }
+    }
+    &__author{
+        font-family: $fontSecondary;
+        font-size: 20px;
+        color: $colorText;
+        text-transform: uppercase;
+        padding: 52px 0 0 0;
+
+        @media screen and (max-width:420px){
+            padding: 30px 0 0 0;
+            font-size: $fontSize + 8px;
+        }
+    }
+
+    &__description{
+        padding: 56px 52px 50px 0;
+        font-family: $fontBase;
+        font-size: $fontSize;
+        font-weight: 300;
+        line-height: 26px;
+        color: $colorText;
+
+        @media screen and (max-width: 420px){
+            padding: 30px 52px 50px 0;
+            font-size: $fontSize + 3px;
+        }
+            
+        &::before{
+            font-family: FontAwesome;
+            content: '\f10d';
+            position: relative;
+            font-size: 20px;
+            color: #5474fd;
+            left: 0;
+            top: -10px;
+            margin: 0 5px 0 0;
+        }
+    }
+}
+
+// ----------------Footer---------------------
+
+.block-footer{
+    background-color: #232323;
+    padding: 120px 0 50px 0;
+
+    @media screen and (max-width: 420px){
+        padding: 60px 0 50px 0;
+    }
+       
+    &__caption{
+        font-family: $fontBase;
+        font-size: $fontSize + 8px;
+        color: #fff;
+        text-align: center;
+        margin: 0 0 12px 0;
+        font-weight: bold;
+        letter-spacing: 6px;
+        text-transform: uppercase;
+    }
+
+    &__under-caption{
+
+        font-family:$fontBase;
+        font-size: $fontSize;
+        color: #fff;    
+        text-align: center;
+        margin: 0 0 30px 0;
+        letter-spacing: 2px
+    }
+
+    &__links{
+        display: block;
+        margin: 0 auto;
+        text-align: center;
+        letter-spacing: 12px;
+    }
+
+    &__fontIcons{
+        font-size: 16px;
+        color: #e8e8e8;
+
+        &:hover{
+            color:#5474fd;
+        }
+    }
+}
